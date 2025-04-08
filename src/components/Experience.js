@@ -12,12 +12,12 @@ const experience = [
   {
     role: "Full Stack Developer",
     company: "Switch Valley",
-    period: "2023 - Present",
+    period: "2025 - Internship",
     description: [
-      "Developed microservices architecture using Node.js and Docker, improving scalability by 40%",
-      "Led migration from legacy PHP system to modern React frontend, reducing load times by 65%",
-      "Implemented CI/CD pipelines using GitHub Actions, reducing deployment time from 2 hours to 15 minutes",
-      "Collaborated with cross-functional teams to deliver 3 major product features ahead of schedule",
+      "Developed microservices architecture using Node.js and Docker, improving scalability.",
+      "Led migration from legacy PHP system to modern React frontend, reducing load times.",
+      "Implemented CI/CD pipelines using GitHub Actions, reducing deployment time.",
+      "Collaborated with cross-functional teams to deliver 3 major product features ahead of schedule.",
     ],
     technologies: ["React", "Node.js", "AWS Lambda", "PostgreSQL", "Docker"],
     icon: <FaServer className="experience-icon" />,
@@ -25,12 +25,10 @@ const experience = [
   {
     role: "Full Stack Engineer",
     company: "Nile Technologies",
-    period: "2021 - 2023",
+    period: "2025 - Internship",
     description: [
-      "Built real-time dashboard for IoT devices using MERN stack (MongoDB, Express, React, Node.js)",
-      "Optimized MongoDB queries, reducing API response time from 1.2s to 300ms",
-      "Integrated Stripe payment gateway handling $250K+ monthly transactions",
-      "Mentored 2 junior developers in React best practices",
+      "Built real-time dashboard for IoT devices using MERN stack (MongoDB, Express, React, Node.js).",
+      "Optimized MongoDB queries, reducing API response time significantly.",
     ],
     technologies: [
       "MERN Stack",
@@ -45,10 +43,10 @@ const experience = [
 
 const education = [
   {
-    degree: "B.Tech in Computer Science",
-    institution: "University XYZ",
-    period: "2016 - 2020",
-    description: ["Specialized in Web Development & Cloud Computing"],
+    degree: "B.Tech in Software Science",
+    institution: "Wolkite University",
+    period: "2020 - 2025",
+    description: ["Specialized in Web Development & Mobile Applications."],
     icon: <FaGraduationCap className="experience-icon" />,
   },
 ];
@@ -61,7 +59,7 @@ const ExperienceCard = ({ item, isEducation = false }) => {
       transition={{ duration: 0.5 }}
       whileHover={{ scale: 1.02 }}
     >
-      <Card className="mb-4 experience-card">
+      <Card className="mb-4 experience-card" style={{ backgroundColor: "#000000", color: "#fff" }}>
         <Card.Body>
           <div className="d-flex align-items-start">
             <div className="experience-icon-container me-3">
@@ -110,7 +108,7 @@ const ExperienceCard = ({ item, isEducation = false }) => {
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-5">
+    <section id="experience" className="py-5" style={{ backgroundColor: "#000", color: "#fff" }}>
       <Container>
         <motion.h2
           className="text-center mb-5"
@@ -146,11 +144,7 @@ const Experience = () => {
               <FaGraduationCap className="me-2" /> Education
             </motion.h3>
             {education.map((edu, index) => (
-              <ExperienceCard
-                key={`edu-${index}`}
-                item={edu}
-                isEducation={true}
-              />
+              <ExperienceCard key={`edu-${index}`} item={edu} isEducation={true} />
             ))}
           </Col>
         </Row>
@@ -160,3 +154,13 @@ const Experience = () => {
 };
 
 export default Experience;
+
+
+// # Add all changes to the staging area
+// git add .
+
+// # Commit the changes with a message
+// git commit -m "Your meaningful commit message here"
+
+// # Push the changes to the remote repository
+// git push origin main

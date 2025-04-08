@@ -59,7 +59,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="about-section py-5 bg-light">
+    <section id="about" className="about-section py-5 bg-black text-white">
       <Container>
         <motion.h2
           className="text-center mb-5 section-title"
@@ -71,7 +71,7 @@ const About = () => {
           About Me
         </motion.h2>
 
-        <Row className="align-items-center mb-5">
+        <Row className="align-items-center mb-5 bg-black text-white p-4 rounded shadow-sm">
           <Col lg={4} className="mb-5 mb-lg-0">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -97,7 +97,7 @@ const About = () => {
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
-              <Card className="about-intro-card mb-4">
+              <Card className="about-intro-card mb-4 bg-black text-white">
                 <Card.Body>
                   <p className="lead mb-4">
                     I'm a passionate{" "}
@@ -117,14 +117,14 @@ const About = () => {
 
         <Row className="mb-5">
           {aboutCards.map((card) => (
-            <Col lg={4} md={6} key={card.id} className="mb-4">
+            <Col lg={4} md={6} key={card.id} className="mb-4 bg-black text-white">
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
               >
-                <Card className="h-100 about-card">
+                <Card className="h-100 about-card bg-black text-white shadow-sm">
                   <Card.Body className="text-center">
                     <div
                       className="card-icon-container mb-3"
@@ -147,13 +147,13 @@ const About = () => {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <Card className="about-more-card">
+          <Card className="about-more-card bg-black text-white shadow-sm">
             <Card.Body>
-              <Row className="align-items-center">
+              <Row className="align-items-center bg-black text-white">
                 <Col md={6}>
                   <p className="mb-4 mb-md-0">
                     My skills include{" "}
-                    <span className="highlight">
+                    <span className="highlight bg-black text-white">
                       React, Node.js, Express, MongoDB, PostgreSQL, and AWS
                     </span>
                     . I love solving complex problems and turning ideas into
@@ -161,7 +161,7 @@ const About = () => {
                   </p>
                 </Col>
                 <Col md={6}>
-                  <p className="mb-0">
+                  <p className="mb-0 bg-black text-white">
                     When I'm not coding, I enjoy contributing to open-source
                     projects, learning new tech, and sharing knowledge through
                     blogs and tutorials.
@@ -173,27 +173,39 @@ const About = () => {
         </motion.div>
 
         <div className="skills-section mt-5">
-          <h4 className="text-center mb-4">My Tech Stack</h4>
-          <div className="skills-grid">
-            {skills.map((skill) => (
-              <motion.div
-                key={skill.id}
-                className="skill-item"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3 }}
-                viewport={{ once: true }}
-              >
-                <div className="skill-icon" style={{ color: skill.color }}>
-                  {skill.icon}
-                </div>
-                <span className="skill-name">{skill.name}</span>
-              </motion.div>
-            ))}
-          </div>
+  <h4 className="text-center mb-4">My Tech Stack</h4>
+  <div
+    className="skills-grid bg-black text-white p-4 rounded shadow-sm d-flex flex-wrap justify-content-center"
+    style={{ gap: "1rem" }}
+  >
+    {skills.map((skill) => (
+      <motion.div
+        key={skill.id}
+        className="skill-item p-3 rounded shadow-sm text-center bg-black text-white"
+        style={{
+          color: skill.color,
+          backgroundColor: "#222",
+          minWidth: "100px",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3 }}
+        viewport={{ once: true }}
+      >
+        <div className="skill-icon mb-2" style={{ fontSize: "2rem" }}>
+          {skill.icon}
         </div>
+        <span className="skill-name">{skill.name}</span>
+      </motion.div>
+    ))}
+  </div>
+</div>
+
       </Container>
     </section>
   );

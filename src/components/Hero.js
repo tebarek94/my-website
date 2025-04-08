@@ -8,8 +8,12 @@ import profileImage from "../assets/images/my image.jpg";
 
 const Hero = () => {
   return (
-    <section id="home" className="hero-section py-5">
-      <Container>
+    <section
+      id="home"
+      className="hero-section py-5 bg-black"
+      style={{ backgroundColor: "#000", color: "#fff" }}
+    >
+      <Container className="py-5 bg-dark text-white">
         <Row className="align-items-center">
           <Col lg={6} className="mb-5 mb-lg-0 order-lg-1 order-2">
             <motion.div

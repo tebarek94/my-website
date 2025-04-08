@@ -31,11 +31,11 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-5 bg-light">
-      <Container>
+    <section id="contact" className="py-5 bg-black text-white">
+      <Container className="py-5 bg-dark text-white">
         <h2 className="text-center mb-5">Get In Touch</h2>
-        <Row>
-          <Col lg={6} className="mb-5 mb-lg-0">
+        <Row >
+          <Col lg={6} className="align-items-center bg-black text-white p-4 rounded shadow-sm">
             <Card className="p-4 shadow-sm">
               <Card.Body>
                 <Form onSubmit={handleSubmit}>
@@ -84,7 +84,7 @@ const Contact = () => {
             </Card>
           </Col>
 
-          <Col lg={6}>
+          <Col lg={6} className="align-items-center bg-black text-white p-4 rounded shadow-sm">
             <Card className="h-100 shadow-sm">
               <Card.Body>
                 <h4 className="mb-4">Contact Information</h4>

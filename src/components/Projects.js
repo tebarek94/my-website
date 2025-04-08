@@ -47,17 +47,62 @@ const projects = [
       code: "https://github.com/tebarek94/quote-generater.git",
     },
   },
+  {
+    title: "Hospital Management System",
+    description:
+      "A system for managing hospital operations like patient information, doctor schedules, and medical records.",
+    tech: "Java, MySQL, Spring Boot",
+    features: [
+      "Patient registration and management",
+      "Doctor scheduling and management",
+      "Medical records tracking",
+    ],
+    links: {
+      demo: "https://github.com/tebarek94/Patient-Management-System",
+      code: "https://github.com/tebarek94/Patient-Management-System",
+    },
+  },
+  {
+    title: "Employee Management System",
+    description:
+      "A system to manage employee records, attendance, payroll, and performance reviews.",
+    tech: "JavaScript, Node.js, MongoDB, Express",
+    features: [
+      "Employee data management",
+      "Attendance tracking",
+      "Payroll management",
+    ],
+    links: {
+      demo: "https://github.com/tebarek94/employee-management-system",
+      code: "https://github.com/tebarek94/employee-management-system",
+    },
+  },
+  {
+    title: "Book Store Management System",
+    description:
+      "A system to manage book inventory, customer orders, and payment processing.",
+    tech: "Python, Django, SQLite",
+    features: [
+      "Book inventory management",
+      "Order processing",
+      "Payment integration",
+    ],
+    links: {
+      demo: "https://github.com/tebarek94/book-story-manegement-system",
+      code: "https://github.com/tebarek94/book-story-manegement-system",
+    },
+  },
 ];
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-5 bg-light">
+    <section id="projects" className="py-5 bg-black text-white">
       <Container>
         <h2 className="text-center mb-5">My Projects</h2>
         <Row>
           {projects.map((project, index) => (
             <Col key={index} lg={4} md={6} className="mb-4">
-              <Card className="h-100 project-card">
+              <Card className="h-100 project-card bg-black text-white shadow-sm">
                 <Card.Body>
                   <Card.Title>{project.title}</Card.Title>
                   <Card.Subtitle className="mb-2 text-muted">

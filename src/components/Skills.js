@@ -25,7 +25,11 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-5">
+    <section
+      id="skills"
+      className="py-5"
+      style={{ backgroundColor: "#000", color: "#fff" }}
+    >
       <Container>
         <motion.h2
           className="text-center mb-5"
@@ -46,7 +50,7 @@ const Skills = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="skill-item p-4 rounded shadow-sm">
+                <div className="skill-item p-4 rounded shadow-sm" style={{ backgroundColor: "#1a1a1a" }}>
                   <div className="d-flex align-items-center mb-3">
                     <div
                       className="skill-icon me-3"
